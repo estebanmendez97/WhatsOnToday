@@ -1,7 +1,6 @@
 import React, {Component} from 'react';
 import { compose, withProps } from "recompose";
 import InfoWindowMarker from './infowindow.jsx';
-import API_KEY from '../apigoogle.js';
 import { withScriptjs, withGoogleMap, GoogleMap, Marker} from "react-google-maps";
 
 
