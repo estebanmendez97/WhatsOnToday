@@ -14,6 +14,8 @@ import Login from './components/login.jsx';
 class App extends Component {
  constructor (props){
    super(props);
+   this.logout = this.logout.bind(this);
+
    this.state = {
      eventList: [],
      lat: null,
@@ -91,6 +93,9 @@ class App extends Component {
      }
    });
  }
+ logout() {
+         fire.auth().signOut();
+     }
 
  render() {
 
@@ -109,6 +114,7 @@ class App extends Component {
         <div>
           {this.state.user ? (<home />) : (<login/>)}
           <Login events={eventInfo}/>
+          
            </div>
              <div style={{width:'100%', height:600}}>
 
